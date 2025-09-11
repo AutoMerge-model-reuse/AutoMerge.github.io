@@ -241,29 +241,11 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-
+            <h1 class="title is-1 publication-title">AutoMerge: Search-Based Model Merging Framework for Effective Model Reuse</h1>
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
+                      <!-- <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
@@ -271,18 +253,10 @@
                         </span>
                         <span>Paper</span>
                       </a>
-                    </span>
+                    </span> -->
 
                     <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
+                    
 
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
@@ -296,7 +270,7 @@
                 </span>
 
                 <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -304,7 +278,7 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
             </div>
           </div>
         </div>
@@ -314,23 +288,7 @@
 </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
+
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -341,7 +299,15 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Software reuse has long been recognized as a critical and widely studied topic in software engineering, offering substantial benefits in reducing development costs, improving software quality, and enhancing operational efficiency. This paradigm extends into deep learning through model reuse. Recently, model merging has emerged in the domain of large language models (LLMs) as a training-free approach that takes multiple task-specific models with the same architecture as source models, and merges them without retraining, enhancing model reuse within LLMs. However, no prior work has systematically investigated whether such an approach can be effectively applied to other deep learning models with different architectures across domains.
+          </p>
+          <p>
+            To bridge this gap, we present the first systematic study that evaluates five model merging techniques on three distinct model architectures across three domains, i.e. LLMs, image classification, and autonomous driving. Our findings reveal that directly applying existing model merging techniques leads to highly inconsistent results and falls notably short of their success within LLMs. Moreover, a single model merging technique often fails to handle the heterogeneous structural properties within a model, limiting its applicability on different model architectures across domains. Furthermore, the effectiveness of model merging techniques is highly sensitive to hyperparameter configurations, thereby constraining their potential for broader adoption.
+          </p>
+          <p>
+            Inspired by these insights, we propose AutoMerge, a novel search-based model merging framework that first segments complex models into multiple heterogeneous blocks and then systematically explores the merging space to identify the 
+            the merging technique and its hyperparameter configuration for each block by Bayesian optimization, producing an out-performing multi-task merged model from multiple source models trained on different tasks.
+            Our evaluation demonstrates that AutoMerge preserves at least 87.98 % of the source models' capabilities after merging, achieving a 31.76 % improvement over prior merging techniques. Besides, our segmentation strategy in AutoMerge improves merging effectiveness by 22.21 %, compared to whole-model hyperparameter search. Further, AutoMerge achieves a 35.66 % efficiency gain relative to retraining-based model reuse.
           </p>
         </div>
       </div>
@@ -349,6 +315,29 @@
   </div>
 </section>
 <!-- End paper abstract -->
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">Prototype and Documents</h2>
+          <div class="level-set has-text-justified">
+            <img src="static/images/Overview.jpg" alt="MY ALT TEXT" />
+            <p>
+              Given Empirical's Insight-1, our goal is to build a model merging framework for effective model reuse of multiple task-specific models with the same architecture across different domains. Building on Insight-2, we propose to apply different merging techniques and hyperparameters to heterogeneous structural properties within complex models. For multiple models that share the same architecture but are trained on distinct tasks, we first partition the models into multiple functional blocks based on their intrinsic structural properties through a model segmentor. Inspired by Insight-3, we adopt a search-based merger, which integrates an extendable set of merging techniques and validation datasets of different tasks, to determine the optimal merging configuration for these blocks pairs. After merging, we obtain a new merged model that maximally preserves the capabilities of both source models and minimizes the preservation discrepancy across tasks.
+              For the ease of presentation, hereafter we illustrate AutoMerge using the case of merging two task-specific models. The same principles, however, generalize naturally to the merging of more than two models.
+            </p>
+            <p>
+              We have implemented a prototype of Argus with 3,256 lines of Python code. The prototype of Argus and
+              documents are available on <a href="https://github.com/Argus4ADS/Argus" target="_blank">GitHub</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- Image carousel -->
@@ -390,67 +379,6 @@
 </div>
 </section>
 <!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
 
 
 <!-- Paper poster -->
