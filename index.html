@@ -424,27 +424,18 @@
           <div class="column is-full">
             <div class="level-set has-text-justified">
               <div class="content">
-                <h2 class="title is-3">Previous Merge Techniques' Effectiveness Evaluation (RQ1)</h2>
+                <h2 class="title is-3">Ablation Study</h2>
                 <div id="results-carousel" class="carousel results-carousel">
                   <div class="item has-text-centered">
-                    <img src="static/results/Table1.jpg" alt="MY ALT TEXT" />
+                    <img src="static/results/merged_Interfuser_gpu_memory_usage_01.jpg" alt="MY ALT TEXT" />
                   </div>
                   <div class="item has-text-centered">
-                    <img src="static/results/Table2.jpg" alt="MY ALT TEXT" />
-                  </div>
-                  <div class="item has-text-centered">
-                    <img src="static/results/Table3.jpg" alt="MY ALT TEXT" />
+                    <img src="static/results/merged_Interfuser_gpu_utilization_01.jpg" alt="MY ALT TEXT" />
                   </div>
                 </div>
-                <h3 class="title is-4">Insight-1</h3>
                 <p>
-                  When directly applied to image classification and autonomous driving, existing model merging techniques yield high capability preservation discrepancy and fall far short of their success with LLMs, thereby limiting the effectiveness of model reuse to some extent.
+                  Figures presents the ablation results of efficiency on the CCT architecture in terms of peak GPU memory usage and the GPU utilization. AutoMerge has a higher time consumption than the w/o segmentor variant, taking approximately 2.14 more hours, on average, to complete the merging process. However, the GPU memory usage, and the GPU utilization fluctuations are similar between AutoMerge and the w/o segmentor variant, suggesting that the computational load on the GPU remains largely unchanged. 
                 </p>
-                <h3 class="title is-4">Insight-2</h3>
-                <p>
-                  A single model merging technique frequently fails to capture the heterogeneous structural properties in complex models across image classification and autonomous driving domains, thereby constraining its applicability to diverse model architectures.
-                </p>
-                
               </div>
             </div>
           </div>
@@ -452,7 +443,7 @@
       </div>
     </section>
 
-    <section class="section hero is-small">
+    <!-- <section class="section hero is-small">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column is-full">
@@ -479,22 +470,21 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
 
     <!-- Paper poster -->
-    <section class="hero is-small is-light">
+    <!-- <section class="hero is-small is-light">
       <div class="hero-body">
         <div class="container">
           <h2 class="title">Poster</h2>
 
-          <!-- TODO: Replace with your poster PDF -->
           <iframe src="static/pdfs/sample.pdf" width="100%" height="550">
           </iframe>
 
         </div>
       </div>
-    </section>
+    </section> -->
     <!--End paper poster -->
 
 
